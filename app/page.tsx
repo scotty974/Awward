@@ -1,15 +1,15 @@
 "use client";
 import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import Alpine from "./components/car/Alpine";
 export default function Home() {
   return (
-    <main>
-      <div className="h-screen w-full">
+    <main className="flex flex-col">
+      <div className="h-40 w-full">
         <Canvas>
           <ambientLight intensity={0.5} />
-          <mesh>
-            <boxGeometry />
-            <meshStandardMaterial />
-          </mesh>
+          <OrbitControls />
+          <Alpine />
         </Canvas>
       </div>
     </main>
